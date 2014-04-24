@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec2df83a-0bcb-4b2c-af01-a2bf6ecf465b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dima/MusicbankButtonActionListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dima/StatsButtonActionListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dima/TutorialButtonActionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dima/ExerciseButtonActionListener.java" afterPath="$PROJECT_DIR$/src/dima/ExerciseButtonActionListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="code.iws" />
@@ -519,7 +515,11 @@
       <created>1398349756976</created>
       <updated>1398349756976</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Листнеры для кнопок">
+      <created>1398350262160</created>
+      <updated>1398350262160</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -566,9 +566,11 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="test2" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Листнеры для кнопок" />
+    <option name="LAST_COMMIT_MESSAGE" value="Листнеры для кнопок" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
