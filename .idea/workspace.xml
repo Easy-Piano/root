@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61b4d729-be54-431d-b8c1-acc0c477f353" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\scopes\scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\code.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\dima\ExerciseButtonActionListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\dima\MusicbankButtonActionListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\dima\StatsButtonActionListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\dima\TutorialButtonActionListener.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forlearning\Dialog.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forlearning\Main.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forlearning\MyThread.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forlearning\RecordingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forlearning\Sound.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forproject\ConvertToMIDI.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forproject\ReadExample.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forproject\WavFile.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\sasha\forproject\WavFileException.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\code\src\test.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Дмитрий\Documents\GitHub\root\Easy Piano presantation.pptx" afterPath="$PROJECT_DIR$/documentation/Easy Piano presantation.pptx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="root.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +58,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -126,10 +105,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files" />
-      </pane>
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -153,6 +128,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,6 +152,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Дмитрий\Documents\GitHub\root\" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Дмитрий\Documents\GitHub\root\documentation" />
     </key>
   </component>
   <component name="RunManager">
@@ -211,6 +193,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -236,19 +231,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -334,7 +316,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279396" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686085" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -342,13 +324,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
