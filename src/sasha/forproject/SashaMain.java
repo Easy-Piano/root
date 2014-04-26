@@ -14,13 +14,18 @@ import javax.swing.*;
  * Created by 1 on 26.04.2014.
  */
 public class SashaMain {//shows spectrum finally
-    private final static int degree=128;
+    private final static int degree=256;
+    private static int offset=1000;//to avoid the beginning
     public static void main(String[] args){
+<<<<<<< HEAD
         // String s="C:\\Users\\1\\IdeaProjects\\myaudio\\src\\Chopin.wav";
         String s = SashaMain.class.getClassLoader().getResource("Chopin.wav").getPath();
+=======
+         String s="C:\\Users\\1\\IdeaProjects\\myaudio\\src\\Chopin.wav";
+>>>>>>> d7bf17f304eb010101d13d6c2f268edc6d604004
         //String s="C:\\Users\\Дмитрий\\Documents\\GitHub\\root\\src\\sasha\\forlearning\\Chopin.wav";
         WavWrapper WW=new WavWrapper(s);
-        double[] v=WW.getArray(0,degree);
+        double[] v=WW.getArray(0,offset,degree);
         double[] vv=new double[degree];
         FFT.complexToComplex(1,degree,v,vv);
 

@@ -9,35 +9,45 @@ import java.util.Vector;
  * Created by 1 on 26.04.2014.
  */
 public class WavWrapper {
+    private final int SIZE=10000;
+    private final int OFFSET=1000;
     private String path;
     private int numChannels;
+    private long sampleRate;//Hz
     private Vector arrays;
     public WavWrapper(String s){
         path=s;
-        arrays = new Vector();
         try
         {
             WavFile wavFile = WavFile.openWavFile(new File(path));
             numChannels = wavFile.getNumChannels();
-            for (int i=0;i<numChannels;i++){
-                arrays.add((new WavArray(wavFile,i)).getArray());
-            }
+            sampleRate = wavFile.getSampleRate();
+            arrays=((new WavArray(wavFile)).getArrays());
             wavFile.close();
         }
         catch (Exception e)
         {
             System.err.println(e);
         }
+        SignalVisualizer SV=new SignalVisualizer();
+        for (int i=0; i<numChannels; i++){
+            SV.visualize(getArray(i,OFFSET,SIZE),sampleRate);
+        }
     }
-    public double[] getArray(int number, int size){
+    public double[] getArray(int number,int offset, int size){
         double[] A = new double[size];
-        if ((number>=arrays.size())||(size>((Vector) arrays.get(0)).size())){
+        if ((number>=arrays.size())||((size+offset)>(((Vector) arrays.get(number)).size()))){
             System.out.println("ERROR");
         }else{
-            for (int i=0; i<size;i++){
-                A[i]=(double)((Vector) arrays.get(number)).get(i);
+            int max=offset+size;
+            int j=0;
+            for (int i=offset;i<max;i++,j++){
+                A[j]=(double)((Vector) arrays.get(number)).get(i);
             }
         }
         return A;
+    }
+    public long getSampleRate(){
+        return sampleRate;
     }
 }

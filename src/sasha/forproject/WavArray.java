@@ -17,55 +17,33 @@ import java.util.Vector;
  */
 public class WavArray {
     private final int BUFFER_SIZE=100;//Constant
-    private String path;
-    private long sampleRate;//Hz
     private int numChannels;
-    private int numChannel;
     private Vector v;//vector of vectors, one vector per channel
-    public WavArray(WavFile wavFile, int n) {
-        sampleRate = wavFile.getSampleRate();
+    public WavArray(WavFile wavFile) {
         numChannels = wavFile.getNumChannels();//equals 1 for mono and 2 for stereo
-        numChannel = n;//min is 0, max is numChannels-1
+        int numChannel;
         v = new Vector();
-
+        for (int i=0; i<numChannels;i++){
+            v.add(new Vector());
+        }
         double buffer[];
         buffer = new double[BUFFER_SIZE * numChannels];
         int framesRead;
-        //*******************************FOR VISUALISATION************
-        XYSeries series = new XYSeries("Magnitude(time) for channel # "+((Integer)(numChannel+1)).toString());
-        double i=0;//to track time coordinate
-        //************************************************************
+
         try {
             do {
                 framesRead = wavFile.readFrames(buffer, BUFFER_SIZE);//stores framesRead*numChannels to buffer
-                for (int s = numChannel; s < framesRead * numChannels; s+=numChannels) {
-                        v.add(buffer[s]);
-                        //*******************************FOR VISUALISATION************
-                        if (i<100000) {
-                            series.add(i / sampleRate, buffer[s]);
-                            i++;
+                for (int s = 0; s < framesRead * numChannels; s+=numChannels) {
+                        for (numChannel=0; numChannel<numChannels; numChannel++){
+                            ((Vector)(v.get(numChannel))).add(buffer[s+numChannel]);
                         }
-                        i++;
-                        //************************************************************
                 }
             } while (framesRead != 0);
         } catch (Exception e) {
             System.err.println(e);
         }
-        //*******************************FOR VISUALISATION************
-        XYDataset xyDataset = new XYSeriesCollection(series);
-        JFreeChart chart = ChartFactory.createXYLineChart("y=magnitude(time)","time","magnitude",
-                xyDataset,PlotOrientation.VERTICAL,true,true,true);
-        JFrame frame = new JFrame(((Integer)(numChannel+1)).toString());
-        frame.getContentPane().add(new ChartPanel(chart));
-        frame.setSize(800,600);
-        frame.setVisible(true);
-        //************************************************************
     }
-    public Vector getArray(){
+    public Vector getArrays(){
         return v;
-    }
-    public long getSampleRate(){
-        return sampleRate;
     }
 }
