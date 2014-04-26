@@ -1,0 +1,53 @@
+package sasha.forproject;
+
+import java.util.Vector;
+
+/**
+ * Created by 1 on 25.04.2014.
+ */
+public class FFT {
+    private long sampleRate;
+    private Vector v;
+    public static void complexToComplex(int sign, int n,
+                                        double[] ar, double[] ai) {
+        double scale = Math.sqrt(1.0d/n);
+
+        int i,j;
+        for (i=j=0; i<n; ++i) {
+            if (j>=i) {
+                double tempr = ar[j]*scale;
+                double tempi = ai[j]*scale;
+                ar[j] = ar[i]*scale;
+                ai[j] = ai[i]*scale;
+                ar[i] = tempr;
+                ai[i] = tempi;
+            }
+            int m = n/2;
+            while (m>=1 && j>=m) {
+                j -= m;
+                m /= 2;
+            }
+            j += m;
+        }
+
+        int mmax,istep;
+        for (mmax=1,istep=2*mmax; mmax<n; mmax=istep,istep=2*mmax) {
+            double delta = (double)sign*3.141592654d/(double)mmax;
+            for (int m=0; m<mmax; ++m) {
+                double w = (double)m*delta;
+                double wr = Math.cos(w);
+                double wi = Math.sin(w);
+                for (i=m; i<n; i+=istep) {
+                    j = i+mmax;
+                    double tr = wr*ar[j]-wi*ai[j];
+                    double ti = wr*ai[j]+wi*ar[j];
+                    ar[j] = ar[i]-tr;
+                    ai[j] = ai[i]-ti;
+                    ar[i] += tr;
+                    ai[i] += ti;
+                }
+            }
+            mmax = istep;
+        }
+    }
+}
