@@ -1,4 +1,4 @@
-package dima;
+package Buttons;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
