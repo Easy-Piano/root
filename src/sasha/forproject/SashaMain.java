@@ -16,8 +16,8 @@ import javax.swing.*;
 public class SashaMain {//shows spectrum finally
     private final static int degree=128;
     public static void main(String[] args){
-        // String s="C:\\Users\\1\\IdeaProjects\\myaudio\\src\\Chopin.wav";
-        String s="C:\\Users\\Дмитрий\\Documents\\GitHub\\root\\src\\sasha\\forlearning\\Chopin.wav";
+         String s="C:\\Users\\1\\IdeaProjects\\myaudio\\src\\Chopin.wav";
+        //String s="C:\\Users\\Дмитрий\\Documents\\GitHub\\root\\src\\sasha\\forlearning\\Chopin.wav";
         WavWrapper WW=new WavWrapper(s);
         double[] v=WW.getArray(0,degree);
         double[] vv=new double[degree];
