@@ -1,4 +1,4 @@
-package sasha.forlearning;
+package sasha.forproject;
 
 import java.io.File;
 import javax.swing.JFrame;
@@ -9,7 +9,6 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-
 public class ReadExample
 {
     public static void main(String[] args)

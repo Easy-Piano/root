@@ -35,6 +35,6 @@ public class FourierVisualizer implements Visualizer {
             if (array[i]>max) {max=array[i];maxnum=i;}
         }
         System.out.println("Min frequency is "+minfrequency+" Max is on frequency "+(maxnum*minfrequency)+"+-"+minfrequency/2+" Max amplitude is "+max);
-        System.out.println("note number is "+(new Notes()).getNoteNumber(maxnum*minfrequency));
+        System.out.println("note number is "+Notes.getNoteNumber(maxnum*minfrequency));
     }
 }
