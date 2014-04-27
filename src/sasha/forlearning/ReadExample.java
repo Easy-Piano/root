@@ -1,4 +1,4 @@
-package sasha.forproject;
+package sasha.forlearning;
 
 import java.io.File;
 import javax.swing.JFrame;
