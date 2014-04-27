@@ -7,7 +7,6 @@ import java.util.logging.Logger;
  * Created by 1 on 26.04.2014.
  */
 public class SashaMain {//shows spectrum finally
-    private static final int degree=2048;//connected with FourierVisualizer.N (N=degree)
     private final static int SIZE=5000;
     private final static int OFFSET=20500;//to skip the beggining
     public static void main(String[] args){
@@ -23,7 +22,7 @@ public class SashaMain {//shows spectrum finally
         for (int i=0; i<WW.getNumChannels(); i++){
             SV.visualize(WW.getArray(i, OFFSET, SIZE),sampleRate);
         }
-        double[] signal=WW.getArray(0,OFFSET,degree);
+        double[] signal=WW.getArray(0,OFFSET,Visualizer.N);
         double[] spectrum=FFT.RealToReal(signal);
         FourierVisualizer FV = new FourierVisualizer();
         FV.visualize(spectrum,sampleRate);
@@ -43,6 +42,7 @@ public class SashaMain {//shows spectrum finally
         }
         midiPlayer.close();//after close nothing wants to work, close it only in the end
         /***************************************************Find out if +1 and -1 are really back and forth
+         int degree=Visualiser.N;
          double[] catchmistake = new double[degree];
          double[] zeros = new double[degree];
          for (int i=0; i<degree; i++) {catchmistake[i]=signal[i];zeros[i]=0;}
