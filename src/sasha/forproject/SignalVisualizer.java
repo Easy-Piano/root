@@ -17,7 +17,7 @@ public class SignalVisualizer implements Visualizer {
     private static int numChannel=0;
     //****************************************CONSTANTS********************
     private static final int step = 1;
-    private static final int max = 100000;
+    private static final int max = 1000000;
     //*********************************************************************
     public void visualize(double[] array, long sampleRate){
         //*******************************FOR VISUALISATION************

@@ -10,7 +10,7 @@ import java.util.Vector;
  */
 public class WavWrapper {
     private final int SIZE=10000;
-    private final int OFFSET=1000;
+    private final int OFFSET=100000;
     private String path;
     private int numChannels;
     private long sampleRate;//Hz
