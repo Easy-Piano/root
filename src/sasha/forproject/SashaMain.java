@@ -1,14 +1,5 @@
 package sasha.forproject;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.xy.XYDataset;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
-
-import javax.swing.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -33,15 +24,15 @@ public class SashaMain {//shows spectrum finally
             SV.visualize(WW.getArray(i, OFFSET, SIZE),sampleRate);
         }
         double[] signal=WW.getArray(0,OFFSET,degree);
-        double[] spectrum=MyFFT.RealToReal(signal);
+        double[] spectrum=FFT.RealToReal(signal);
         FourierVisualizer FV = new FourierVisualizer();
         FV.visualize(spectrum,sampleRate);
 
         int notes[][] = {{470, 81}, {230, 80}, {470, 81}, {250, -1}, {230, 80}, {470, 81}, {230, 69}, {230, 76}, {470, 81}, {230, 69}, {470, 74}, {470, 73}, {470, 74}, {470, 76}, {470, 73}, {470, 71}, {970, -1}, {230, 69}, {230, 68}, {470, 69}, {730, -1}, {230, 64}, {230, 69}, {230, 71}, {470, 73}, {970, -1}, {230, 73}, {230, 74}, {470, 76}, {730, -1}, {230, 69}, {230, 74}, {230, 73}, {470, 71}, {1450, -1}, {470, 81}, {230, 80}, {470, 81}, {250, -1}, {230, 80}, {470, 81}, {230, 69}, {230, 76}, {470, 81}, {230, 69}, {470, 74}, {470, 73}, {470, 74}, {470, 76}, {470, 73}, {470, 71}, {970, -1}, {230, 69}, {230, 68}, {470, 69}, {730, -1}, {230, 64}, {230, 69}, {230, 71}, {470, 73}, {970, -1}, {230, 73}, {230, 74}, {470, 76}, {730, -1}, {230, 69}, {230, 74}, {230, 73}, {470, 71}, {250, -1}};
-        Player player = new Player();
+        MidiPlayer midiPlayer = new MidiPlayer();
         for (int[] note : notes) {
             if (note[1] != -1) {
-                player.playSound(1, note[0], 80, note[1]);
+                midiPlayer.playSound(1, note[0], 80, note[1]);
             } else {
                 try {
                     Thread.sleep(note[0]);
@@ -50,7 +41,7 @@ public class SashaMain {//shows spectrum finally
                 }
             }
         }
-        player.close();//after close nothing wants to work, close it only in the end
+        midiPlayer.close();//after close nothing wants to work, close it only in the end
         /***************************************************Find out if +1 and -1 are really back and forth
          double[] catchmistake = new double[degree];
          double[] zeros = new double[degree];

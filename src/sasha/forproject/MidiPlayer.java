@@ -10,19 +10,19 @@ import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Synthesizer;
 
-public class Player {
+public class MidiPlayer {
 
     private MidiChannel[] channels = null;
     private Synthesizer synth = null;
 
-    public Player() {
+    public MidiPlayer() {
         try {
             synth = MidiSystem.getSynthesizer();
             synth.open();
             channels = synth.getChannels();
             channels[0].programChange(41);
         } catch (MidiUnavailableException ex) {
-            Logger.getLogger(Player.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MidiPlayer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -37,7 +37,7 @@ public class Player {
         try {
             Thread.sleep(duration);
         } catch (InterruptedException ex) {
-            Logger.getLogger(Player.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MidiPlayer.class.getName()).log(Level.SEVERE, null, ex);
         }
         for (int note : notes) {
             channels[channel].noteOff(note);

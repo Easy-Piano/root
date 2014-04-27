@@ -14,7 +14,6 @@ import javax.swing.*;
  * Created by 1 on 26.04.2014.
  */
 public class FourierVisualizer implements Visualizer {
-    private final static int N = 2048;
     public void visualize(double[] array,long sampleRate){//amplitude, not phase
         XYSeries seriesmag = new XYSeries("Spectrum magnitude");
         double minfrequency=sampleRate/N;
