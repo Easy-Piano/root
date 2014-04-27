@@ -62,6 +62,7 @@ public class FFT {
         for (int i=0; i<n; i++){
             backup[i]=Math.sqrt(backup[i]*backup[i]+zeros[i]*zeros[i]);
         }
+
         return backup;
     }
 }

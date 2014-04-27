@@ -21,8 +21,8 @@ public class SignalVisualizer implements Visualizer {
         numChannel++;
         XYSeries series = new XYSeries("Magnitude(time) for channel # "+((Integer)(numChannel)).toString());
         double i;//to track time coordinate
-        int mymax=(max < array.length ? max : array.length);
-        for (i=0; i<mymax; i+=step){
+        int mymax=(MAX < array.length ? MAX : array.length);
+        for (i=0; i<mymax; i+= STEP){
             series.add(i/sampleRate,array[(int)i]);
         }
         XYDataset xyDataset = new XYSeriesCollection(series);

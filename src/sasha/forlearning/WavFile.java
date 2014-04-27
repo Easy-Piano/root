@@ -147,14 +147,14 @@ public class WavFile
 		if (wavFile.validBits > 8)
 		{
 			// If more than 8 validBits, data is signed
-			// Conversion required multiplying by magnitude of max positive value
+			// Conversion required multiplying by magnitude of MAX positive value
 			wavFile.floatOffset = 0;
 			wavFile.floatScale = Long.MAX_VALUE >> (64 - wavFile.validBits);
 		}
 		else
 		{
 			// Else if 8 or less validBits, data is unsigned
-			// Conversion required dividing by max positive value
+			// Conversion required dividing by MAX positive value
 			wavFile.floatOffset = 1;
 			wavFile.floatScale = 0.5 * ((1 << wavFile.validBits) - 1);
 		}
@@ -282,14 +282,14 @@ public class WavFile
 		if (wavFile.validBits > 8)
 		{
 			// If more than 8 validBits, data is signed
-			// Conversion required dividing by magnitude of max negative value
+			// Conversion required dividing by magnitude of MAX negative value
 			wavFile.floatOffset = 0;
 			wavFile.floatScale = 1 << (wavFile.validBits - 1);
 		}
 		else
 		{
 			// Else if 8 or less validBits, data is unsigned
-			// Conversion required dividing by max positive value
+			// Conversion required dividing by MAX positive value
 			wavFile.floatOffset = -1;
 			wavFile.floatScale = 0.5 * ((1 << wavFile.validBits) - 1);
 		}

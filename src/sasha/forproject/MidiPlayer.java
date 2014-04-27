@@ -20,7 +20,7 @@ public class MidiPlayer {
             synth = MidiSystem.getSynthesizer();
             synth.open();
             channels = synth.getChannels();
-            channels[0].programChange(41);
+            channels[0].programChange(1);//Acoustic Royal
         } catch (MidiUnavailableException ex) {
             Logger.getLogger(MidiPlayer.class.getName()).log(Level.SEVERE, null, ex);
         }
