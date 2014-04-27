@@ -20,6 +20,8 @@ public class SashaMain {//shows spectrum finally
     private final static int SIZE=5000;
     private final static int OFFSET=20500;//to skip the beggining
     public static void main(String[] args){
+        Notes Nclass;
+        Nclass=new Notes();
         //String s = SashaMain.class.getClassLoader().getResource("Chopin.wav").getPath();
         //String s="C:\\Users\\1\\Documents\\GitHub\\root\\src\\sasha\\forproject\\Chopin.wav";
         String s="C:\\Users\\1\\Documents\\GitHub\\root\\src\\sasha\\forproject\\samples_1.wav";//10000++ nuisance
@@ -48,7 +50,7 @@ public class SashaMain {//shows spectrum finally
                 }
             }
         }
-        player.close();
+        player.close();//after close nothing wants to work, close it only in the end
         /***************************************************Find out if +1 and -1 are really back and forth
          double[] catchmistake = new double[degree];
          double[] zeros = new double[degree];
