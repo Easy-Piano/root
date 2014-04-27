@@ -9,8 +9,6 @@ import java.util.Vector;
  * Created by 1 on 26.04.2014.
  */
 public class WavWrapper {
-    private final int SIZE=10000;
-    private final int OFFSET=100000;
     private String path;
     private int numChannels;
     private long sampleRate;//Hz
@@ -29,10 +27,6 @@ public class WavWrapper {
         {
             System.err.println(e);
         }
-        SignalVisualizer SV=new SignalVisualizer();
-        for (int i=0; i<numChannels; i++){
-            SV.visualize(getArray(i,OFFSET,SIZE),sampleRate);
-        }
     }
     public double[] getArray(int number,int offset, int size){
         double[] A = new double[size];
@@ -50,4 +44,5 @@ public class WavWrapper {
     public long getSampleRate(){
         return sampleRate;
     }
+    public int getNumChannels() {return numChannels;}
 }
