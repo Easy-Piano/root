@@ -9,29 +9,31 @@ import java.util.logging.Logger;
  * Created by 1 on 26.04.2014.
  */
 public class SashaMain {//shows spectrum finally
-    private final static int SIZE=5000;
-    private final static int OFFSET=20500;//to skip the beggining
+    public final static int SIZE=500000;//used in FFT also
+    private final static int OFFSET=0;//to skip the beggining //was 20500
     public static void main(String[] args){
         Notes Nclass;
         Nclass=new Notes();
-        //String s = SashaMain.class.getClassLoader().getResource("Chopin.wav").getPath();
-        //String s="C:\\Users\\1\\Documents\\GitHub\\root\\src\\sasha\\forproject\\Chopin.wav";
-        String s="C:\\Users\\1\\Documents\\GitHub\\root\\src\\sasha\\forproject\\samples_1.wav";//10000++ nuisance
-        //String s="C:\\Users\\Дмитрий\\Documents\\GitHub\\root\\src\\sasha\\forlearning\\Chopin.wav";
+        String s=SashaMain.class.getClassLoader().getResource("//").getPath()+"sasha\\forproject\\";
+        //s+="ritm02.wav";
+        s+="upr_02.wav";
+        //String s="C:\\Users\\1\\Documents\\GitHub\\root\\src\\sasha\\forproject\\samples_1.wav";//10000++ nuisance
+        MonoRecognizer MR = new MonoRecognizer(s);
+
+        /////////////////////////
         //Graphs
-        WavWrapper WW=new WavWrapper(s);
-        long sampleRate=WW.getSampleRate();
+        /*
         SignalVisualizer SV=new SignalVisualizer();
         for (int i=0; i<WW.getNumChannels(); i++){
             SV.visualize(WW.getArray(i, OFFSET, SIZE),sampleRate);
         }
         double[] signal=WW.getArray(0,OFFSET,Visualizer.N);
-        double[] spectrum=FFT.RealToReal(signal);
+        double[] spectrum=FFT.RealToReal(signal,Visualiser.N);
         FourierVisualizer FV = new FourierVisualizer();
-        FV.visualize(spectrum,sampleRate);
+        FV.visualize(spectrum,sampleRate);*/
         //////////////////////
         //Music 1
-        try {
+        /*try {
             Sequence sequence = MidiSystem.getSequence(new File("C:\\Users\\1\\Documents\\GitHub\\root\\src\\" +
                     "sasha\\forproject\\yiruma-river_flows_in_you.mid"));
             Synthesizer synth;
@@ -48,7 +50,7 @@ public class SashaMain {//shows spectrum finally
         } catch (Exception e) {
             System.err.println(e);
         }
-
+        */
         ///////////////////////////
         /*Music 2
         int notes[][] = {{470, 81}, {230, 80}, {470, 81}, {250, -1}, {230, 80}, {470, 81}, {230, 69}, {230, 76}, {470, 81}, {230, 69}, {470, 74}, {470, 73}, {470, 74}, {470, 76}, {470, 73}, {470, 71}, {970, -1}, {230, 69}, {230, 68}, {470, 69}, {730, -1}, {230, 64}, {230, 69}, {230, 71}, {470, 73}, {970, -1}, {230, 73}, {230, 74}, {470, 76}, {730, -1}, {230, 69}, {230, 74}, {230, 73}, {470, 71}, {1450, -1}, {470, 81}, {230, 80}, {470, 81}, {250, -1}, {230, 80}, {470, 81}, {230, 69}, {230, 76}, {470, 81}, {230, 69}, {470, 74}, {470, 73}, {470, 74}, {470, 76}, {470, 73}, {470, 71}, {970, -1}, {230, 69}, {230, 68}, {470, 69}, {730, -1}, {230, 64}, {230, 69}, {230, 71}, {470, 73}, {970, -1}, {230, 73}, {230, 74}, {470, 76}, {730, -1}, {230, 69}, {230, 74}, {230, 73}, {470, 71}, {250, -1}};

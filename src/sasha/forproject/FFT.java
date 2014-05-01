@@ -50,12 +50,13 @@ public class FFT {
             mmax = istep;
         }
     }
-    public static double[] RealToReal(double[] signal) {
-        int n = signal.length;
+    public static double[] RealToReal(double[] signal, int from) {
+        int n = Visualizer.N;
+        if ((n+from)>SashaMain.SIZE) return null;
         double[] backup = new double[n];
         double[] zeros = new double[n];
         for (int i = 0; i < n; i++) {
-            backup[i] = signal[i];
+            backup[i] = signal[i+from];
             zeros[i] = 0;
         }
         FFT.complexToComplex(-1,n,backup,zeros);//-1, 1, 10 as first parameter. which one to choose?
