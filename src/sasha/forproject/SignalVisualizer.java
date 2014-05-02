@@ -10,9 +10,6 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 import javax.swing.*;
 
-/**
- * Created by 1 on 26.04.2014.
- */
 public class SignalVisualizer implements Visualizer {
     private static int numChannel=0;
     //*********************************************************************
